@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  list-style: none;
+  border: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  outline: 0;
+}
+
+body,
+html {
+  background: black;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tweet-settings {
+  color: white;
+  border-right: 1px solid #2f3336;
+  height: 100%;
+  width: 400px;
+  margin-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #6e767d;
+    padding: 20px 0 20px 0;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #6e767d;
+    margin-top: 40px;
+  }
+
+  ul {
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #00acee;
+      width: 100%;
+      color: white;
+      padding: 10px 0px 10px 0px;
+      border: none;
+      border-radius: 5px;
+      transition: all linear 0.15s;
+      cursor: pointer;
+
+      &:hover {
+        color: #2f3336;
+      }
+    }
+
+    .dowload-url {
+      display: none;
+    }
+  }
+
+  label {
+    opacity: 0.8;
+    font-size: 15px;
+  }
+
+  .input {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #6e767d;
+    color: white;
+    padding: 10px 0;
+
+    &::placeholder {
+      color: white;
+      opacity: 0.8;
+      font-size: 15px;
+    }
+
+    &:focus {
+      border-bottom: 1px solid #aebbc6;
+    }
+  }
+
+  .line-w {
+    width: 20%;
+    border :none;
+  }
+  .check-box{
+    height: 18px;
+  }
+  .add-file {
+    width: max-content;
+    padding: 5px 10px 5px 10px;
+    background-color: #00acee; /* Buton rengi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .textarea {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #6e767d;
+    color: white;
+    padding: 10px 0;
+    overflow: scroll;
+    font-size: 15px;
+    line-height: 1.5;
+    resize: none;
+
+    &::placeholder {
+      color: white;
+      opacity: 0.8;
+    }
+
+    &:focus {
+      border-bottom: 1px solid #aebbc6;
+    }
+  }
+}
+
+.tweet-container {
+  padding: 0 50px;
+  margin: auto;
+
+  .fetch-info {
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+
+    input {
+      flex: 1;
+      background-color: transparent;
+      border-bottom: 1px solid #6e767d;
+      border-left: 1px solid #6e767d;
+
+      color: white;
+      height: 30px;
+      line-height: 30px;
+
+      &:focus {
+        border-bottom: 1px solid #a8b4bd;
+      }
+    }
+
+    button {
+      background-color: #00acee;
+      color: white;
+      letter-spacing: 0.5px;
+      font-size: 15px;
+      padding: 0 10px 0 10px;
+      margin-left: 5px;
+      border-radius: 5px;
+    }
+  }
+}
+
+.tweet {
+  border: 1px solid #2f3336;
+  width: 600px;
+  margin: 25px auto;
+  padding: 0 16px;
+  background-color: black;
+
+  &-author {
+    height: 48px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+    font-size: 15px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+      border-radius: 50%;
+    }
+
+    .name {
+      color: white;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+
+      .verifi {
+        width: 19;
+        height: 19;
+        margin-left: 1px;
+      }
+    }
+
+    .username {
+      color: #6e767d;
+    }
+  }
+
+  &-content {
+    padding: 12px 0;
+
+    p {
+      font-size: 23px;
+      line-height: 28px;
+      color: white;
+
+      span {
+        color: #00acee;
+      }
+    }
+  }
+
+  &-stats {
+    height: 53px;
+    display: flex;
+    color: #6e767d;
+    align-items: center;
+    font-size: 15px;
+    border-top: 1px solid #2f3336;
+
+    b {
+      color: white;
+      margin-right: 2px;
+    }
+
+    span:not(last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &-actions {
+    height: 48px;
+    display: flex;
+    border-top: 1px solid #2f3336;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+
+    span {
+      height: 24px;
+      width: 24px;
+      color: #6e767d;
+
+    }
+  }
+}
